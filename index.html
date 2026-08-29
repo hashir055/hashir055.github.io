@@ -76,7 +76,8 @@
 
   /* ---------- clip reveal for headings ---------- */
   @keyframes clipUp{from{clip-path:inset(0 0 100% 0);transform:translateY(10px)}to{clip-path:inset(0 0 0 0);transform:none}}
-  .sec-head h2{overflow:hidden}
+  .sec-head h2{overflow:visible}
+  .clip{display:inline-block}
   .reveal.in .clip{animation:clipUp .85s cubic-bezier(.16,1,.3,1) both}
 
   /* ---------- scanline sweep on console ---------- */
@@ -182,7 +183,7 @@
   .btn:focus-visible,a:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 
   /* ---------- hero ---------- */
-  .hero{padding:64px 0 36px;position:relative}
+  .hero{padding:52px 0 24px;position:relative}
   .hero::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
     background:radial-gradient(380px circle at var(--mx,80%) var(--my,10%), rgba(255,180,84,.055), transparent 60%);
     transition:background .3s ease}
@@ -217,8 +218,8 @@
   .cl .txt{color:var(--white);opacity:.88;overflow:hidden;text-overflow:ellipsis}
 
   /* ---------- stats ---------- */
-  .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:26px}
-  .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:24px 0}
+  .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:18px}
+  .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:20px 0}
   .stat .num{font-family:var(--mono);font-weight:600;font-size:1.85rem;color:var(--white);font-variant-numeric:tabular-nums}
   .stat .lab{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
 
@@ -229,16 +230,16 @@
   .portrait::after{content:"";position:absolute;top:12px;left:12px;right:-12px;bottom:-12px;
     border:1px solid var(--line-amber);border-radius:4px;z-index:0}
   .about-body h2{font-family:var(--display);font-weight:600;letter-spacing:-.01em;font-size:clamp(1.7rem,3.4vw,2.4rem);margin:14px 0 0}
-  .about-body p{color:var(--muted);font-size:1.05rem;margin-top:16px;max-width:60ch}
-  .about-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .about-body p{color:var(--muted);font-size:1.05rem;margin-top:12px;max-width:60ch}
+  .about-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
   .fact{font-family:var(--mono);font-size:.72rem;color:var(--white);opacity:.85;border:1px solid var(--line);padding:.4rem .7rem;border-radius:3px}
-  .about-cta{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap}
+  .about-cta{display:flex;gap:14px;margin-top:20px;flex-wrap:wrap}
 
   /* ---------- section scaffold ---------- */
-  section.block{padding:84px 0}
-  .sec-head{max-width:640px;margin-bottom:44px}
-  .sec-head h2{font-family:var(--display);font-weight:600;letter-spacing:-.01em;font-size:clamp(1.8rem,3.8vw,2.5rem);margin:14px 0 0;line-height:1.15}
-  .sec-head p{color:var(--muted);margin-top:14px;font-size:1.02rem}
+  section.block{padding:52px 0}
+  .sec-head{max-width:640px;margin-bottom:28px}
+  .sec-head h2{font-family:var(--display);font-weight:600;letter-spacing:-.01em;font-size:clamp(1.8rem,3.8vw,2.5rem);margin:10px 0 0;line-height:1.15}
+  .sec-head p{color:var(--muted);margin-top:10px;font-size:1.02rem}
 
   /* ---------- services ---------- */
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -277,7 +278,7 @@
 
   /* ---------- tools ---------- */
   .toolgroups{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 40px}
-  .toolrow{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline;flex-wrap:wrap}
+  .toolrow{display:flex;gap:18px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline;flex-wrap:wrap}
   .toolrow .cat{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);min-width:150px}
   .toolrow .items{color:var(--white);opacity:.9;font-size:.96rem}
 
@@ -305,12 +306,12 @@
   .marquee-wrap:hover .marquee-track{animation-play-state:paused}
 
   /* ---------- booking + contact ---------- */
-  .cta-panel{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:56px;text-align:center;position:relative}
+  .cta-panel{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:44px;text-align:center;position:relative}
   .cta-panel h2{font-family:var(--display);font-weight:600;font-size:clamp(1.8rem,3.8vw,2.6rem);letter-spacing:-.01em}
   .cta-panel p{color:var(--muted);max-width:48ch;margin:16px auto 0;font-size:1.05rem}
-  .cta-row{display:flex;gap:14px;justify-content:center;margin-top:30px;flex-wrap:wrap}
+  .cta-row{display:flex;gap:14px;justify-content:center;margin-top:24px;flex-wrap:wrap}
 
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:26px}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:18px}
   .contact-list{display:grid;gap:12px}
   .cline{display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:4px;padding:16px 18px;transition:border-color .2s,background .2s}
   .cline:hover{border-color:var(--line-amber);background:rgba(255,180,84,.03)}
@@ -326,7 +327,7 @@
   .form-note{font-size:.85rem;color:var(--muted)}
 
   /* ---------- footer ---------- */
-  footer{border-top:1px solid var(--line);padding:32px 0;margin-top:20px}
+  footer{border-top:1px solid var(--line);padding:26px 0;margin-top:10px}
   .foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:.85rem;font-family:var(--mono)}
   .foot .mono{font-size:.78rem}
 
@@ -355,6 +356,7 @@
     .cta-panel{padding:38px 26px}
   }
   @media(max-width:520px){
+    section.block{padding:38px 0}
     .steps{grid-template-columns:1fr}
     .steps::before{display:none}
     .wrap{padding:0 20px}
@@ -616,7 +618,7 @@
 </section>
 
 <!-- BOOKING -->
-<section class="block" id="book">
+<section class="block" id="book" style="padding-bottom:36px">
   <div class="wrap">
     <div class="cta-panel reveal">
       <p class="eyebrow" style="justify-content:center">Let's talk</p>
@@ -636,7 +638,7 @@
 </section>
 
 <!-- CONTACT -->
-<section class="block" id="contact" style="padding-top:20px">
+<section class="block" id="contact" style="padding-top:12px">
   <div class="wrap">
     <div class="sec-head reveal">
       <p class="eyebrow">Contact</p>
