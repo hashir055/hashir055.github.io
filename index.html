@@ -1036,6 +1036,34 @@
   })();
 })();
 </script>
+<!-- CURSOR SWARM: agent cursors build the page as you scroll -->
+<script src="https://cdn.jsdelivr.net/gh/ZhengLinLei/cursor-swarm.js/cursor-swarm.min.js"></script>
+<script>
+(function () {
+  if (!window.CursorSwarm) return; // if the library fails to load, the site works as normal
 
+  // Let the swarm do the reveal instead of the existing fade-ins, so the two don't fight
+  document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  var steps = document.querySelector('.steps');
+  if (steps) steps.classList.add('in');
+
+  new CursorSwarm({
+    cursors: 4,
+    names: ['WORKFLOW', 'VOICE', 'WEB', 'DEPLOY'],
+    palette: {
+      colors: ['#FFB454', '#8FE3C7', '#FFC97A', '#C98A46'],   // your amber + ice colours
+      hud: { background: '#0E1013', color: '#ECEEF2', mute: '#868FA0', border: 'rgba(255,255,255,.10)' }
+    },
+    startPosition: 'outside',   // cursors fly in from off-screen
+    root: 'main',               // leaves the navbar, footer and background canvases alone
+    ignore: '.hero, .marquee-wrap, form',
+    copyPaste: 0.6,             // service cards and project cards get copy-pasted from each other
+    relocation: false,
+    deconstruct: false,
+    exitAfterBuild: true,       // cursors leave the screen when there's nothing to build
+    hudPosition: 'bottom-right'
+  }).init();
+})();
+</script>
 </body>
 </html>
